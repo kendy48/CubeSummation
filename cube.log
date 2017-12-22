@@ -68,3 +68,8 @@
  at [Source: java.io.PushbackInputStream@ed9d9d1; line: 2, column: 12] (through reference chain: com.ssocial.model.request.SolveCubeRequest["input"]); nested exception is com.fasterxml.jackson.databind.JsonMappingException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value
  at [Source: java.io.PushbackInputStream@ed9d9d1; line: 2, column: 15]
  at [Source: java.io.PushbackInputStream@ed9d9d1; line: 2, column: 12] (through reference chain: com.ssocial.model.request.SolveCubeRequest["input"])
+2017-12-22 10:57:47.271  INFO 3917 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e: startup date [Fri Dec 22 08:39:09 VET 2017]; root of context hierarchy
+2017-12-22 10:57:47.273  INFO 3917 --- [Thread-3] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@24e5389c: startup date [Fri Dec 22 08:39:15 VET 2017]; parent: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72d1ad2e
+2017-12-22 10:57:47.347  INFO 3917 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-12-22 10:57:47.349  INFO 3917 --- [Thread-3] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-12-22 10:57:47.350  INFO 3917 --- [Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
