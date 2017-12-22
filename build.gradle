@@ -1,0 +1,53 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'war'
+
+jar {
+	baseName = 'service'
+	version =  '0.1.0'
+}
+
+
+war {
+	baseName = 'v'
+	version =  '1'
+}
+
+repositories {
+	jcenter()
+}
+
+
+
+configurations {
+	providedRuntime
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter")
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+	compile('io.springfox:springfox-swagger2:2.5.0')
+	compile('io.springfox:springfox-swagger-ui:2.5.0')
+	compile('org.springframework.boot:spring-boot-starter-mail')
+
+	compile 'com.google.apis:google-api-services-youtube:v3-rev182-1.22.0'
+	compile group: 'com.google.gdata', name: 'core', version: '1.47.1'
+	compile 'com.google.apis:google-api-services-youtube:v3-rev182-1.22.0'
+	compile group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.11.0-beta'
+
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+	testCompile("junit:junit")
+}
