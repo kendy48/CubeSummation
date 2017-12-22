@@ -33,7 +33,7 @@ public class CubeBs {
 
         //Verificamos el numero de casos
         try{
-            cases = Integer.valueOf(lines[0]);
+            cases = Integer.valueOf(lines[0].trim());
         } catch (Exception e){
             throw new ControllerException(INVALID_CASE_NUMBER);
         }
@@ -47,7 +47,7 @@ public class CubeBs {
         for(int i=0; i<cases; i++){
 
             //Obtenermos los valores del caso y validamos el tamano del cubo y el numero de operaciones
-            String[] mainValues = lines[lineCounter].split(" ");
+            String[] mainValues = lines[lineCounter].trim().split(" ");
             lineCounter++;
             if(mainValues.length != 2){
                 throw new ControllerException(INVALID_MAIN_CASE_VALUES);
@@ -82,7 +82,7 @@ public class CubeBs {
 
             //resolvemos las operaciones
             for(int j=lineCounter; j<lineCounter+m; j++){
-                String s = solveOperation(cubo, lines[j]);
+                String s = solveOperation(cubo, lines[j].trim());
                 if(null != s){
                     response.append(s+"\n");
                 }
